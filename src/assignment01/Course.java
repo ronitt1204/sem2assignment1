@@ -127,7 +127,7 @@ public class Course {
      * @param student
      * @return 
      */
-    public ArrayList getStudent(Student student)
+    public ArrayList<Student> getStudents()
     {
         return Student;
     }
@@ -135,12 +135,22 @@ public class Course {
      * This method returns the course name and course code as a String
      * @return 
      */
+    
+    
     @Override
     public String toString()
     {
         return (courseName + " " + courseCode);
     }
-    
-    
+    /**
+     * this method will print the names of each student registered in the class to the screen. 
+     * There should be 1 student per line.
+     */
+    public void showClassList()
+    {
+        for(Student student:Student)
+        System.out.printf("%s %s %n",student.getFirstName(),student.getLastName());
+         
+    }
     
 }
